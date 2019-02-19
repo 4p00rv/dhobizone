@@ -1,46 +1,25 @@
 // @format
 import React from 'react';
-import PropTypes from 'prop-types';
-import {StaticQuery, graphql} from 'gatsby';
-
+import {Image1} from './styled_image';
 import Header from './header';
-import './layout.css';
+import Tagline from './tagline';
+import styled from 'styled-components';
+import tw from 'tailwind.macro';
 
-const Layout = ({children}) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-      }
-    `}
-    render={data => (
-      <>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `0px 1.0875rem 1.45rem`,
-            paddingTop: 0,
-          }}>
-          <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer>
-        </div>
-      </>
-    )}
-  />
-);
+const Wrapper = styled.div`
+  position: relative;
+  ${tw`h-screen-tag flex flex-col`}
+  font-family: 'Roboto';
+`;
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+const Layout = ({children}) => {
+  return (
+    <Wrapper>
+      <Image1 />
+      <Header siteTitle="Dhobinzone" />
+      <Tagline content="Keeping it clean." />
+    </Wrapper>
+  );
 };
 
 export default Layout;

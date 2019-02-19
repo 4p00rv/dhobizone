@@ -547,6 +547,7 @@ module.exports = {
     '48': '12rem',
     '64': '16rem',
     'full': '100%',
+    'screen-tag': '90vh',
     'screen': '100vh',
   },
 

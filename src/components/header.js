@@ -9,11 +9,12 @@ import Img from 'gatsby-image';
 const HeaderStyled = styled.header`
   width: 100%;
   ${tw`font-sans`}
-  position: absolute;
+  position: relative;
   display: block;
   z-index: +2;
 `;
 
+/*
 const ImgStyled = styled(Img)`
   width: 42px;
   ${tw`mr-4`}
@@ -37,28 +38,32 @@ const Logo = () => (
     )}
   />
 );
-
+*/
 const Wrapper = styled.div`
-  display: flex;
-  margin: 0 auto;
-  max-width: 960px;
-  ${tw`text-grey-lightest`}
+  ${tw`text-grey-lightest flex sm:flex-row flex-col md:mx-32 mx-4`}
   justify-content: space-between;
-  padding: 1.45rem 1.0875rem;
+  padding: 1.45rem 0;
   border-bottom: 2px solid rgba(255, 255, 255, 0.3);
   text-transform: uppercase;
 `;
 
-const TitleText = styled.div`
-  ${tw`text-2xl font-light tracking-widest`}
+const AnchorFlex = styled.a`
+  ${tw`mx-1 sm:mx-1`}
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
 `;
 
-const Item = styled.a`
-  ${tw`text-sm font-hairline tracking-wide`}
+const TitleText = styled(AnchorFlex)`
+  ${tw`text-2xl font-light tracking-widest sm:mb-0 mb-2`}
+`;
+
+const Item = styled(AnchorFlex)`
+  ${tw`text-sm font-hairline tracking-wide sm:justify-end justify-start sm:leading-none leading-loose`}
   text-decoration: none;
   cursor: pointer;
   &:hover {
-    ${tw`font-light`}
+    ${tw`font-bold`}
   }
 `;
 

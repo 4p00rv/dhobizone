@@ -1,13 +1,9 @@
 // @format
 import React from 'react';
-import {Image1} from '../components/styled_image';
-import Header from '../components/header';
+import Layout from '../components/layout';
 import 'typeface-roboto';
 import 'typeface-grand-hotel';
+import '../components/default.css';
 
-const IndexPage = () => (
-  <Image1 style={{fontFamily: 'Roboto'}}>
-    <Header siteTitle="DHOBIZON" />
-  </Image1>
-);
+const IndexPage = () => <Layout />;
 export default IndexPage;
