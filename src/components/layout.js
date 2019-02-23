@@ -5,6 +5,8 @@ import Header from './header';
 import Tagline from './tagline';
 import styled from 'styled-components';
 import tw from 'tailwind.macro';
+import Services from './services';
+import Pricing from './pricing';
 
 const Wrapper = styled.div`
   position: relative;
@@ -14,11 +16,15 @@ const Wrapper = styled.div`
 
 const Layout = ({children}) => {
   return (
-    <Wrapper>
-      <Image1 />
-      <Header siteTitle="Dhobinzone" />
-      <Tagline content="Keeping it clean." />
-    </Wrapper>
+    <React.Fragment>
+      <Wrapper>
+        <Image1 />
+        <Header siteTitle="Dhobizone" />
+        <Tagline content="Keeping it clean." />
+      </Wrapper>
+      <Services />
+      <Pricing />
+    </React.Fragment>
   );
 };
 

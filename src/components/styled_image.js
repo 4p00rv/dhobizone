@@ -17,15 +17,8 @@ const ImageCustom = styled(Img)`
   position: fixed;
   &:before {
     content: '';
-    display: block;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.5);
+    ${tw`block fixed bg-brand pin opacity-75`};
     z-index: +1;
-    transition: all 0.3s linear;
   }
 `;
 

@@ -44,6 +44,10 @@ let defaultConfig = require('tailwindcss/defaultConfig')()
 */
 
 let colors = {
+  'brand': '#434E3A',
+  'brand-1': '#C8B824',
+  'brand-2': '#98C0D8',
+  'brand-3': '#B14056',
   'transparent': 'transparent',
 
   'black': '#22292f',
@@ -52,7 +56,7 @@ let colors = {
   'grey-dark': '#8795a1',
   'grey': '#b8c2cc',
   'grey-light': '#dae1e7',
-  'grey-lighter': '#f1f5f8',
+  'grey-lighter': '#F6F9F9',
   'grey-lightest': '#f8fafc',
   'white': '#ffffff',
 
@@ -228,6 +232,12 @@ module.exports = {
       'Courier New',
       'monospace',
     ],
+    'grand-hotel': [
+      'Grand Hotel'
+    ],
+    'ubuntu': [
+      'Ubuntu',
+    ]
   },
 
 
@@ -532,6 +542,7 @@ module.exports = {
   height: {
     'auto': 'auto',
     'px': '1px',
+    '2px': '2px',
     '1': '0.25rem',
     '2': '0.5rem',
     '3': '0.75rem',
@@ -590,6 +601,7 @@ module.exports = {
 
   minHeight: {
     '0': '0',
+    'content': '16rem',
     'full': '100%',
     'screen': '100vh',
   },

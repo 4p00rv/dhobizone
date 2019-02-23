@@ -40,7 +40,7 @@ const Logo = () => (
 );
 */
 const Wrapper = styled.div`
-  ${tw`text-grey-lightest flex sm:flex-row flex-col md:mx-32 mx-4`}
+  ${tw`text-grey-lightest flex sm:flex-row flex-col md:mx-32 mx-0`}
   justify-content: space-between;
   padding: 1.45rem 0;
   border-bottom: 2px solid rgba(255, 255, 255, 0.3);
@@ -48,22 +48,27 @@ const Wrapper = styled.div`
 `;
 
 const AnchorFlex = styled.a`
-  ${tw`mx-1 sm:mx-1`}
-  display: flex;
-  flex-grow: 1;
-  align-items: center;
+  ${tw`text-grey-lightest mx-4 sm:mx-1 flex items-center mb-4 sm:mb-0`}
+  &:visited {
+    ${tw`text-grey-lightest`}
+  }
+  &:active {
+    ${tw`text-grey-lightest`}
+  }
 `;
 
 const TitleText = styled(AnchorFlex)`
-  ${tw`text-2xl font-light tracking-widest sm:mb-0 mb-2`}
+  ${tw`text-2xl font-light tracking-widest`}
 `;
 
 const Item = styled(AnchorFlex)`
-  ${tw`text-sm font-hairline tracking-wide sm:justify-end justify-start sm:leading-none leading-loose`}
+  ${tw`text-sm font-hairline tracking-wide sm:justify-end justify-start px-0 sm:px-4`}
   text-decoration: none;
   cursor: pointer;
-  &:hover {
-    ${tw`font-bold`}
+  @media (min-width: 576px) {
+    &:hover {
+      box-shadow: 0px 2px rgba(255, 255, 255, 0.3);
+    }
   }
 `;
 
@@ -75,9 +80,11 @@ const Header = ({siteTitle}) => (
   <HeaderStyled>
     <Wrapper>
       <TitleText>{siteTitle}</TitleText>
-      <Item>Services</Item>
-      <Item>Pricing</Item>
-      <Item>Contact</Item>
+      <Item href="#services">Services</Item>
+      <Item href="#pricing">Pricing</Item>
+      <Item style={tw`mb-0`} href="#contact">
+        Contact
+      </Item>
     </Wrapper>
   </HeaderStyled>
 );
