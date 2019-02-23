@@ -232,9 +232,6 @@ module.exports = {
       'Courier New',
       'monospace',
     ],
-    'grand-hotel': [
-      'Grand Hotel'
-    ],
     'ubuntu': [
       'Ubuntu',
     ]
