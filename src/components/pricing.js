@@ -5,7 +5,7 @@ import tw from 'tailwind.macro';
 import {Space, Wrapper, RowWrapper, Row, Col, Divider} from './commonElements';
 
 const CustomWrapper = styled(Wrapper)`
-  ${tw`bg-brand`}
+  ${tw`bg-brand  opacity-75`}
 `;
 
 const RowWrapperCustom = styled(RowWrapper)`

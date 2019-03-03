@@ -8,7 +8,7 @@ export const Space = styled.div`
 `;
 
 export const Wrapper = styled.div`
-  ${tw`flex flex-col min-h-content relative p-8 sm:p-16 font-light items-center opacity-75`}
+  ${tw`flex flex-col min-h-content relative p-8 sm:p-16 font-light items-center`}
   z-index: +2;
 `;
 
