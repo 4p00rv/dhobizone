@@ -80,9 +80,10 @@ const Header = ({siteTitle}) => (
   <HeaderStyled>
     <Wrapper>
       <TitleText>{siteTitle}</TitleText>
-      <Item href="#services">Services</Item>
-      <Item href="#pricing">Pricing</Item>
-      <Item style={tw`mb-0`} href="#contact">
+      <Item href="/#services">Services</Item>
+      <Item href="/#pricing">Pricing</Item>
+      <Item href="/#terms">Terms & Conditions</Item>
+      <Item style={tw`mb-0`} href="/#contact">
         Contact
       </Item>
     </Wrapper>

@@ -13,7 +13,7 @@ export const Wrapper = styled.div`
 `;
 
 export const RowWrapper = styled.div`
-  ${tw`flex-col sm:flex-row flex justify-between w-2/3 p-8`}
+  ${tw`flex-col sm:flex-row flex justify-between sm:w-2/3 p-8`}
 `;
 
 export const Row = styled.div`

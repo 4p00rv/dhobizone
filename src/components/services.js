@@ -48,6 +48,8 @@ const Services = () => (
     <Space />
     <Space />
     <Feature />
+    <Space />
+    <Space />
   </CustomWrapper>
 );
 

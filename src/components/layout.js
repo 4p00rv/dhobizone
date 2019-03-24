@@ -7,6 +7,8 @@ import styled from 'styled-components';
 import tw from 'tailwind.macro';
 import Services from './services';
 import Pricing from './pricing';
+import Contact from './contact';
+import Terms from './terms';
 
 const Wrapper = styled.div`
   position: relative;
@@ -24,6 +26,8 @@ const Layout = ({children}) => {
       </Wrapper>
       <Services />
       <Pricing />
+      <Contact />
+      <Terms />
     </React.Fragment>
   );
 };
