@@ -12,12 +12,12 @@ const ImageWrapper = styled.div`
 `;
 
 const ImageCustom = styled(Img)`
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: auto;
   position: fixed;
   &:before {
     content: '';
-    ${tw`block fixed bg-brand pin opacity-75`};
+    ${tw`block fixed bg-brand pin opacity-85`};
     z-index: +1;
   }
 `;
@@ -26,7 +26,7 @@ export const Image1 = ({children}) => (
   <StaticQuery
     query={graphql`
       query {
-        placeholderImage: file(relativePath: {eq: "towel-3156896_1920.jpg"}) {
+        placeholderImage: file(relativePath: {eq: "gatsby-icon.jpg"}) {
           childImageSharp {
             fluid(maxWidth: 2000) {
               ...GatsbyImageSharpFluid
